@@ -22,7 +22,7 @@
 &lt;h2 id=&#34;turtle库的绘图窗体&#34;&gt;turtle库的绘图窗体&lt;/h2&gt;
 &lt;p&gt;指令：turtle.setup(width, height, startx, starty)&lt;/p&gt;
 &lt;p&gt;后两个参数不是必须的，若没有则窗口中心点默认置于屏幕中心点处&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0084d1Lmly1hhlzfg3tpij312j0dc0xw.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://xiaotianmuyun1113.top/../../public/img/turtle_setup.png&#34;
 	
 	
 	
