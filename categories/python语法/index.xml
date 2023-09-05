@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>python语法 on 晓天暮云的Blog</title>
+        <link>https://xiaotianmuyun1113.top/categories/python%E8%AF%AD%E6%B3%95/</link>
+        <description>Recent content in python语法 on 晓天暮云的Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 02 Sep 2023 20:20:08 +0800</lastBuildDate><atom:link href="https://xiaotianmuyun1113.top/categories/python%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Turtle库</title>
+        <link>https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/</link>
+        <pubDate>Sat, 02 Sep 2023 20:20:08 +0800</pubDate>
+        
+        <guid>https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/</guid>
+        <description>&lt;h2 id=&#34;笔记来源&#34;&gt;笔记来源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.icourse163.org/course/BIT-268001?outVendor=zw_mooc_pclszykctj_&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北理——Python语言程序设计&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文内部图片大多来自课程课件，侵权请告知&lt;a class=&#34;link&#34; href=&#34;mailto:1979409875@qq.com&#34; &gt;1979409875@qq.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;turtle库概述&#34;&gt;turtle库概述&lt;/h2&gt;
+&lt;p&gt;turtle(海龟)库是turtle绘图体系的Python实现，是Python语言的标准库之一&lt;/p&gt;
+&lt;p&gt;turtle库通过窗体中海龟的移动，隐藏或显示海龟的移动轨迹来进行图形的绘制，可以通过代码来改变轨迹的粗细，颜色等特性&lt;/p&gt;
+&lt;h2 id=&#34;turtle库的绘图窗体&#34;&gt;turtle库的绘图窗体&lt;/h2&gt;
+&lt;p&gt;指令：turtle.setup(width, height, startx, starty)&lt;/p&gt;
+&lt;p&gt;后两个参数不是必须的，若没有则窗口中心点默认置于屏幕中心点处&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0084d1Lmly1hhlzfg3tpij312j0dc0xw.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;绘图窗体&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;turtle库的空间坐标体系&#34;&gt;turtle库的空间坐标体系&lt;/h2&gt;
+&lt;h3 id=&#34;绝对坐标&#34;&gt;绝对坐标&lt;/h3&gt;
+&lt;p&gt;即以屏幕的中心点作为坐标系的原点，然后以一个像素作为一个单位长度，以水平向右为x轴正方向，竖直向上为y轴正方向，对窗口中的每个点进行唯一确定的坐标表示&lt;/p&gt;
+&lt;p&gt;turtle.goto(x, y)即让海龟沿直线从当前位置移动到点(X, Y)处&lt;/p&gt;
+&lt;h3 id=&#34;海龟坐标&#34;&gt;海龟坐标&lt;/h3&gt;
+&lt;p&gt;即以海龟头部为正方向，来进行控制&lt;/p&gt;
+&lt;p&gt;turtle.fd(d)即让海龟前进d个像素&lt;/p&gt;
+&lt;p&gt;turtle.bk(d)即让海龟后退d个像素&lt;/p&gt;
+&lt;p&gt;turtle.circle(r, angle)即让海龟沿着半径为r（r为正时圆在海龟的左手边）的圆移动到距当前点angle（angle为正时即为逆时针运动）角度的点上&lt;/p&gt;
+&lt;h2 id=&#34;turtle的角度坐标体系&#34;&gt;turtle的角度坐标体系&lt;/h2&gt;
+&lt;h3 id=&#34;绝对角度&#34;&gt;绝对角度&lt;/h3&gt;
+&lt;p&gt;以水平向右为0°，竖直向上为90°，对海龟头部的角度进行描述&lt;/p&gt;
+&lt;p&gt;turtle.seth(angle)即让海龟的头部转到angle的方向上，其中angle为绝对角度，seth函数使用后海龟只转向而不行进&lt;/p&gt;
+&lt;h3 id=&#34;海龟角度&#34;&gt;海龟角度&lt;/h3&gt;
+&lt;p&gt;以海龟头现方向为正方向，来描述转向&lt;/p&gt;
+&lt;p&gt;turtle.left/right(angle)即让海龟向左/右转向angle的角度&lt;/p&gt;
+&lt;h2 id=&#34;rgb色彩体系&#34;&gt;RGB色彩体系&lt;/h2&gt;
+&lt;p&gt;RGB指的是红绿蓝三个通道的颜色组合，通过控制每个通道的参数来改变所得到的颜色，&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Python基础语法</title>
+        <link>https://xiaotianmuyun1113.top/p/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+        <pubDate>Sat, 02 Sep 2023 13:12:23 +0800</pubDate>
+        
+        <guid>https://xiaotianmuyun1113.top/p/python%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+        <description>&lt;h2 id=&#34;笔记来源&#34;&gt;笔记来源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.icourse163.org/course/BIT-268001?outVendor=zw_mooc_pclszykctj_&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北理——Python语言程序设计&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文内部图片大多来自课程课件，侵权请告知&lt;a class=&#34;link&#34; href=&#34;mailto:1979409875@qq.com&#34; &gt;1979409875@qq.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编译和解释&#34;&gt;编译和解释&lt;/h2&gt;
+&lt;h3 id=&#34;编译&#34;&gt;编译&lt;/h3&gt;
+&lt;p&gt;将源代码一次性转换成目标代码的过程&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wx4.sinaimg.cn/mw690/0084d1Lmly1hhlxv9b7goj30yy0gswgg.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;这是图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;解释&#34;&gt;解释&lt;/h3&gt;
+&lt;p&gt;将源代码逐条转换成目标代码同时逐条执行的过程(类似同声传译)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wx1.sinaimg.cn/mw690/0084d1Lmly1hhlxv9a2k5j317g0ko41p.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;这是图片&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;程序的编写方法and思想&#34;&gt;程序的编写方法and思想&lt;/h2&gt;
+&lt;h3 id=&#34;ipo&#34;&gt;IPO&lt;/h3&gt;
+&lt;p&gt;I：Input 程序的输入(文件，网络，控制台，交互界面，内部参数)&lt;/p&gt;
+&lt;p&gt;P: Proce 对于输入数据的处理，即算法，是一个程序的灵魂所在&lt;/p&gt;
+&lt;p&gt;O: Output 结果的输出(控制台，图形，网络，文件，内部参数)&lt;/p&gt;
+&lt;p&gt;IPO思想是编写程序的基本思想，根据用户的输入和所需的输出，进行主体程序的设计和编写，是最简单粗暴的思路。&lt;/p&gt;
+&lt;h2 id=&#34;python开发环境&#34;&gt;python开发环境&lt;/h2&gt;
+&lt;h3 id=&#34;python基本开发环境idle&#34;&gt;python基本开发环境IDLE&lt;/h3&gt;
+&lt;p&gt;python官方提供，适用于小规模程序开发&lt;/p&gt;
+&lt;p&gt;优点：轻量级，使用灵活；功能丰富，拥有众多标准库以及第三方库可供使用。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.python.org/downloads&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;python高级开发环境vscode&#34;&gt;python高级开发环境VSCode&lt;/h3&gt;
+&lt;p&gt;配置该环境时要先布局IDLE，后下载VSCode&lt;a class=&#34;link&#34; href=&#34;https://code.visualstudio.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;python的计算生态&#34;&gt;python的计算生态&lt;/h2&gt;
+&lt;p&gt;标准库+第三方库&lt;/p&gt;
+&lt;p&gt;标准库：随解释器直接安装到操作系统中的功能模块&lt;/p&gt;
+&lt;p&gt;第三方库：需要经过安装才能使用的功能模块&lt;/p&gt;
+&lt;h2 id=&#34;两种编程方式&#34;&gt;两种编程方式&lt;/h2&gt;
+&lt;p&gt;交互式：对每个输入语句立即运行结果&lt;/p&gt;
+&lt;p&gt;文件式：代码在py文件中编写完成后一次性进行运行，是编程的主要方式&lt;/p&gt;
+&lt;h2 id=&#34;程序的格式框架&#34;&gt;程序的格式框架&lt;/h2&gt;
+&lt;p&gt;缩进：一行代码开始前的空白部分，用于指出程序的层次结构；是语法的一部分，缩进错误程序也会报错；一个程序中的缩进一般一致，统一为1个Tab或4个空格&lt;/p&gt;
+&lt;p&gt;注释：不被程序执行的辅助性文字，用于提高代码的可读性；若单行则以#开头，若多行则以&amp;rsquo;&amp;lsquo;&amp;lsquo;开头和结尾&lt;/p&gt;
+&lt;h2 id=&#34;命名与保留字&#34;&gt;命名与保留字&lt;/h2&gt;
+&lt;p&gt;变量：程序中用于保存和表示数据的占位符号&lt;/p&gt;
+&lt;p&gt;命名：用=将变量和标识符关联起来的过程，命名要遵循许多规则，如：可为大小写字母，数字，下划线和中文字符或其组合；大小写敏感；首字符不能为数字；不与保留字相同&lt;/p&gt;
+&lt;p&gt;保留字：被编程语言内部定义并保留使用的标识符。python中有35个保留字，它们分别为以下图片中所示&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://wx4.sinaimg.cn/mw690/0084d1Lmly1hhlxv99n2oj310j0k1tjf.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;python中的保留字&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

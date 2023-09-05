@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>python库 on 晓天暮云的Blog</title>
+        <link>https://xiaotianmuyun1113.top/categories/python%E5%BA%93/</link>
+        <description>Recent content in python库 on 晓天暮云的Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Sat, 02 Sep 2023 20:20:08 +0800</lastBuildDate><atom:link href="https://xiaotianmuyun1113.top/categories/python%E5%BA%93/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Turtle库</title>
+        <link>https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/</link>
+        <pubDate>Sat, 02 Sep 2023 20:20:08 +0800</pubDate>
+        
+        <guid>https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/</guid>
+        <description>&lt;h2 id=&#34;笔记来源&#34;&gt;笔记来源&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.icourse163.org/course/BIT-268001?outVendor=zw_mooc_pclszykctj_&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;北理——Python语言程序设计&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文内部图片大多来自课程课件，侵权请告知&lt;a class=&#34;link&#34; href=&#34;mailto:1979409875@qq.com&#34; &gt;1979409875@qq.com&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;turtle库概述&#34;&gt;turtle库概述&lt;/h2&gt;
+&lt;p&gt;turtle(海龟)库是turtle绘图体系的Python实现，是Python语言的标准库之一&lt;/p&gt;
+&lt;p&gt;turtle库通过窗体中海龟的移动，隐藏或显示海龟的移动轨迹来进行图形的绘制，可以通过代码来改变轨迹的粗细，颜色等特性&lt;/p&gt;
+&lt;h2 id=&#34;turtle库的绘图窗体&#34;&gt;turtle库的绘图窗体&lt;/h2&gt;
+&lt;p&gt;指令：turtle.setup(width, height, startx, starty)&lt;/p&gt;
+&lt;p&gt;后两个参数不是必须的，若没有则窗口中心点默认置于屏幕中心点处&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://tva1.sinaimg.cn/large/0084d1Lmly1hhlzfg3tpij312j0dc0xw.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;绘图窗体&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;turtle库的空间坐标体系&#34;&gt;turtle库的空间坐标体系&lt;/h2&gt;
+&lt;h3 id=&#34;绝对坐标&#34;&gt;绝对坐标&lt;/h3&gt;
+&lt;p&gt;即以屏幕的中心点作为坐标系的原点，然后以一个像素作为一个单位长度，以水平向右为x轴正方向，竖直向上为y轴正方向，对窗口中的每个点进行唯一确定的坐标表示&lt;/p&gt;
+&lt;p&gt;turtle.goto(x, y)即让海龟沿直线从当前位置移动到点(X, Y)处&lt;/p&gt;
+&lt;h3 id=&#34;海龟坐标&#34;&gt;海龟坐标&lt;/h3&gt;
+&lt;p&gt;即以海龟头部为正方向，来进行控制&lt;/p&gt;
+&lt;p&gt;turtle.fd(d)即让海龟前进d个像素&lt;/p&gt;
+&lt;p&gt;turtle.bk(d)即让海龟后退d个像素&lt;/p&gt;
+&lt;p&gt;turtle.circle(r, angle)即让海龟沿着半径为r（r为正时圆在海龟的左手边）的圆移动到距当前点angle（angle为正时即为逆时针运动）角度的点上&lt;/p&gt;
+&lt;h2 id=&#34;turtle的角度坐标体系&#34;&gt;turtle的角度坐标体系&lt;/h2&gt;
+&lt;h3 id=&#34;绝对角度&#34;&gt;绝对角度&lt;/h3&gt;
+&lt;p&gt;以水平向右为0°，竖直向上为90°，对海龟头部的角度进行描述&lt;/p&gt;
+&lt;p&gt;turtle.seth(angle)即让海龟的头部转到angle的方向上，其中angle为绝对角度，seth函数使用后海龟只转向而不行进&lt;/p&gt;
+&lt;h3 id=&#34;海龟角度&#34;&gt;海龟角度&lt;/h3&gt;
+&lt;p&gt;以海龟头现方向为正方向，来描述转向&lt;/p&gt;
+&lt;p&gt;turtle.left/right(angle)即让海龟向左/右转向angle的角度&lt;/p&gt;
+&lt;h2 id=&#34;rgb色彩体系&#34;&gt;RGB色彩体系&lt;/h2&gt;
+&lt;p&gt;RGB指的是红绿蓝三个通道的颜色组合，通过控制每个通道的参数来改变所得到的颜色，&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
