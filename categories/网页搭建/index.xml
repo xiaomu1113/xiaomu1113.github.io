@@ -6,7 +6,28 @@
         <description>Recent content in 网页搭建 on 晓天暮云的Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Thu, 15 Jun 2023 13:39:56 +0800</lastBuildDate><atom:link href="https://xiaotianmuyun1113.top/categories/%E7%BD%91%E9%A1%B5%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 05 Sep 2023 19:48:39 +0800</lastBuildDate><atom:link href="https://xiaotianmuyun1113.top/categories/%E7%BD%91%E9%A1%B5%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Blog编写中遇到的问题</title>
+        <link>https://xiaotianmuyun1113.top/p/blog%E7%BC%96%E5%86%99%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Tue, 05 Sep 2023 19:48:39 +0800</pubDate>
+        
+        <guid>https://xiaotianmuyun1113.top/p/blog%E7%BC%96%E5%86%99%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;h2 id=&#34;图片显示不出来&#34;&gt;图片显示不出来&lt;/h2&gt;
+&lt;h3 id=&#34;法1-该部分为转载&#34;&gt;法1 (该部分为转载)&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/p/570445352&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;原文地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以微博作为图床，将图片通过微博发布后再拷贝其图像链接至文档即可&lt;/p&gt;
+&lt;p&gt;具体操作：&lt;/p&gt;
+&lt;p&gt;step1：下载微博图床插件 &lt;a class=&#34;link&#34; href=&#34;https://wwu.lanzouy.com/ipvpN0d0sb3g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;step2: 在浏览器中打开管理拓展，打开开发者模式，再点击加载解压缩的扩展，导入解压后的图床插件&lt;/p&gt;
+&lt;p&gt;step3：上微博号，打开插件即可上传图片&lt;/p&gt;
+&lt;p&gt;如果你想删掉某一张图，点击&amp;quot;设置/历史&amp;quot;即可&lt;/p&gt;
+&lt;h3 id=&#34;法2&#34;&gt;法2&lt;/h3&gt;
+&lt;p&gt;将图片放在static目录下，在图片引用时要写成(/img/图片名.图片格式)&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>html5 学习笔记</title>
         <link>https://xiaotianmuyun1113.top/p/html5-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Thu, 15 Jun 2023 13:39:56 +0800</pubDate>

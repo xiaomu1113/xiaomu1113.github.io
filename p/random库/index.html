@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com turtle库概述 turt'>
-<title>Turtle库</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com random库概述 rand'>
+<title>Random库</title>
 
-<link rel='canonical' href='https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/'>
+<link rel='canonical' href='https://xiaotianmuyun1113.top/p/random%E5%BA%93/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Turtle库'>
-<meta property='og:description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com turtle库概述 turt'>
-<meta property='og:url' content='https://xiaotianmuyun1113.top/p/turtle%E5%BA%93/'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Random库'>
+<meta property='og:description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com random库概述 rand'>
+<meta property='og:url' content='https://xiaotianmuyun1113.top/p/random%E5%BA%93/'>
 <meta property='og:site_name' content='晓天暮云的Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-02T20:20:08&#43;08:00'/><meta property='article:modified_time' content='2023-09-02T20:20:08&#43;08:00'/>
-<meta name="twitter:title" content="Turtle库">
-<meta name="twitter:description" content="笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com turtle库概述 turt">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-19T10:59:13&#43;08:00'/><meta property='article:modified_time' content='2023-09-19T10:59:13&#43;08:00'/>
+<meta name="twitter:title" content="Random库">
+<meta name="twitter:description" content="笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com random库概述 rand">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -267,26 +267,9 @@
             <nav id="TableOfContents">
   <ol>
     <li><a href="#笔记来源">笔记来源</a></li>
-    <li><a href="#turtle库概述">turtle库概述</a></li>
-    <li><a href="#turtle库的绘图窗体">turtle库的绘图窗体</a></li>
-    <li><a href="#turtle库的空间坐标体系">turtle库的空间坐标体系</a>
-      <ol>
-        <li><a href="#绝对坐标">绝对坐标</a></li>
-        <li><a href="#海龟坐标">海龟坐标</a></li>
-      </ol>
-    </li>
-    <li><a href="#turtle的角度坐标体系">turtle的角度坐标体系</a>
-      <ol>
-        <li><a href="#绝对角度">绝对角度</a></li>
-        <li><a href="#海龟角度">海龟角度</a></li>
-      </ol>
-    </li>
-    <li><a href="#rgb色彩体系">RGB色彩体系</a>
-      <ol>
-        <li><a href="#rgb的色彩模式">RGB的色彩模式</a></li>
-      </ol>
-    </li>
-    <li><a href="#画笔控制函数">画笔控制函数</a></li>
+    <li><a href="#random库概述">random库概述</a></li>
+    <li><a href="#基本随机函数">基本随机函数</a></li>
+    <li><a href="#扩展随机函数">扩展随机函数</a></li>
   </ol>
 </nav>
         </div>
@@ -318,7 +301,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/turtle%E5%BA%93/">Turtle库</a>
+            <a href="/p/random%E5%BA%93/">Random库</a>
         </h2>
     
         
@@ -340,7 +323,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2023-09-02</time>
+                <time class="article-time--published">2023-09-19</time>
             </div>
         
 
@@ -355,7 +338,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -374,50 +357,40 @@
 <p><a class="link" href="https://www.icourse163.org/course/BIT-268001?outVendor=zw_mooc_pclszykctj_"  target="_blank" rel="noopener"
     >北理——Python语言程序设计</a></p>
 <p>本文内部图片大多来自课程课件，侵权请告知<a class="link" href="mailto:1979409875@qq.com" >1979409875@qq.com</a></p>
-<h2 id="turtle库概述">turtle库概述</h2>
-<p>turtle(海龟)库是turtle绘图体系的Python实现，是Python语言的标准库之一</p>
-<p>turtle库通过窗体中海龟的移动，隐藏或显示海龟的移动轨迹来进行图形的绘制，可以通过代码来改变轨迹的粗细，颜色等特性</p>
-<h2 id="turtle库的绘图窗体">turtle库的绘图窗体</h2>
-<p>指令：turtle.setup(width, height, startx, starty)</p>
-<p>后两个参数不是必须的，若没有则窗口中心点默认置于屏幕中心点处</p>
-<p><img src="/img/turtle_setup.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="绘图窗体"
-	
-	
-></p>
-<h2 id="turtle库的空间坐标体系">turtle库的空间坐标体系</h2>
-<h3 id="绝对坐标">绝对坐标</h3>
-<p>即以屏幕的中心点作为坐标系的原点，然后以一个像素作为一个单位长度，以水平向右为x轴正方向，竖直向上为y轴正方向，对窗口中的每个点进行唯一确定的坐标表示</p>
-<p>turtle.goto(x, y)即让海龟沿直线从当前位置移动到点(X, Y)处</p>
-<h3 id="海龟坐标">海龟坐标</h3>
-<p>即以海龟头部为正方向，来进行控制</p>
-<p>turtle.fd(d)即让海龟前进d个像素</p>
-<p>turtle.bk(d)即让海龟后退d个像素</p>
-<p>turtle.circle(r, angle)即让海龟沿着半径为r（r为正时圆在海龟的左手边）的圆移动到距当前点angle（angle为正时即为逆时针运动）角度的点上</p>
-<h2 id="turtle的角度坐标体系">turtle的角度坐标体系</h2>
-<h3 id="绝对角度">绝对角度</h3>
-<p>以水平向右为0°，竖直向上为90°，对海龟头部的角度进行描述</p>
-<p>turtle.seth(angle)即让海龟的头部转到angle的方向上，其中angle为绝对角度，seth函数使用后海龟只转向而不行进</p>
-<h3 id="海龟角度">海龟角度</h3>
-<p>以海龟头现方向为正方向，来描述转向</p>
-<p>turtle.left/right(angle)即让海龟向左/右转向angle的角度</p>
-<h2 id="rgb色彩体系">RGB色彩体系</h2>
-<p>RGB指的是红绿蓝三个通道的颜色组合，通过控制每个通道的参数来改变所得到的颜色，它可以覆盖视力所能感知的所有颜色</p>
-<h3 id="rgb的色彩模式">RGB的色彩模式</h3>
-<p>turtle.colormode(mode)通过控制mode参数来改变色彩模式</p>
-<p>-1.0：RGB小数值模式，参数取值为0~1之间的小数(一般位两位)</p>
-<p>-255：RGB整数值模式，参数取值为0~255之间的整数</p>
-<h2 id="画笔控制函数">画笔控制函数</h2>
-<p>turtle.penup()/turtle.pu()抬起画笔，海龟移动时不显示轨迹</p>
-<p>turtle.pendown()/turtle.pd()落下画笔，显示出海龟的移动轨迹</p>
-<p>turtle.pensize(width)/turtle.width(width)设置线条粗细</p>
-<p>turtle.pencolor(color)设置画笔颜色，color为颜色字符串或对应颜色的RGB值</p>
-
+<h2 id="random库概述">random库概述</h2>
+<p>random库是用于产生随机数的python标准库</p>
+<p>其采用梅森旋转算法生成（伪）随机序列中的元素</p>
+<h2 id="基本随机函数">基本随机函数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">seed</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="c1">#初始化随机数种子，相同的种子产生的元素序列是相同的</span>
+</span></span><span class="line"><span class="cl"><span class="n">random</span><span class="p">()</span> <span class="c1">#产生一个0~1之间的随机小数（不包括1）</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="扩展随机函数">扩展随机函数</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">randint</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="c1">#生成一个[a, b]之间的整数</span>
+</span></span><span class="line"><span class="cl"><span class="n">randrange</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">[,</span> <span class="n">k</span><span class="p">])</span> <span class="c1">#生成一个[m, n)之间以k为步长的随机整数</span>
+</span></span><span class="line"><span class="cl"><span class="n">getrandbits</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="c1">#生成一个k bit长的随机整数</span>
+</span></span><span class="line"><span class="cl"><span class="n">uniform</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="c1">#生成一个[a, b]之间的随机小数</span>
+</span></span><span class="line"><span class="cl"><span class="n">choice</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#从序列a中随机选择一个元素</span>
+</span></span><span class="line"><span class="cl"><span class="n">shuffle</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#将序列a中的元素随机打乱</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -492,12 +465,12 @@
             
                 
 <article class="">
-    <a href="/p/random%E5%BA%93/">
+    <a href="/p/time%E5%BA%93/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Random库</h2>
+            <h2 class="article-title">Time库</h2>
         </div>
     </a>
 </article>
@@ -505,12 +478,12 @@
             
                 
 <article class="">
-    <a href="/p/time%E5%BA%93/">
+    <a href="/p/turtle%E5%BA%93/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Time库</h2>
+            <h2 class="article-title">Turtle库</h2>
         </div>
     </a>
 </article>
