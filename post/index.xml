@@ -1408,6 +1408,76 @@
 &lt;/div&gt;</description>
         </item>
         <item>
+        <title>编译器的工作原理</title>
+        <link>https://xiaotianmuyun1113.top/p/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
+        <pubDate>Fri, 21 Jul 2023 17:24:39 +0800</pubDate>
+        
+        <guid>https://xiaotianmuyun1113.top/p/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;h2 id=&#34;参考书籍&#34;&gt;参考书籍&lt;/h2&gt;
+&lt;p&gt;北京邮电大学出版社 《计算机软件基础》 秦金磊，李整编著&lt;/p&gt;
+&lt;h2 id=&#34;whats-编译器&#34;&gt;What&amp;rsquo;s 编译器&lt;/h2&gt;
+&lt;p&gt;在计算机中，使用高级语言（如python、c++等）写出来的源程序，无法被计算机直接识别，高级语言必须经过翻译变成机器语言后才可被计算机所执行。这时候就要用到翻译器。而翻译器对高级语言翻译的方式一共有两种，分别为编译和解释，对应的翻译程序便称为编译器和翻译器。&lt;/p&gt;
+&lt;p&gt;高级语言的编译过程可以由下图展示出来&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaotianmuyun1113.top/img/%e7%bc%96%e8%af%91%e8%bf%87%e7%a8%8b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;编译过程&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;编译器的工作原理&#34;&gt;编译器的工作原理&lt;/h2&gt;
+&lt;p&gt;编译器的基本工作过程包括六大步骤&lt;/p&gt;
+&lt;h3 id=&#34;步骤一词法分析&#34;&gt;步骤一：词法分析&lt;/h3&gt;
+&lt;p&gt;编译器会逐行扫描源代码，并识别符号串，主要为关键字、字面量、标识符（变量名和数据名）、运算符、注释、以及其他的特殊符号等。符号串会根据自身类别被归类并等待下一步的处理。&lt;/p&gt;
+&lt;p&gt;例如，语句 a = b + c/2中，编译器将语句读入后将会得到记号流 a(id1), =, b(id2), +, c(id3), /, 2。其中分别使用id1，id2，id3来表示实型变量a、b、c，语句中间的空格被省略。&lt;/p&gt;
+&lt;h3 id=&#34;步骤二语法分析&#34;&gt;步骤二：语法分析&lt;/h3&gt;
+&lt;p&gt;得到记号流后，编译器中的语法分析器会将其分解成语法短语，如“程序”、“语句”、“表达式”等。这些语法短语可以表示成语法分析树。后根据所用语言的语法对每个分析树进行检查，若合法便以内部格式将其存起来。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://xiaotianmuyun1113.top/img/%e8%af%ad%e6%b3%95%e6%a0%91.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;语法分析树&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;步骤三语义分析&#34;&gt;步骤三：语义分析&lt;/h3&gt;
+&lt;p&gt;语义分析的主要内容包括以下几个方面：运算符两端的类型是否兼容、该将哪些数据进行类型转换、是否控制转移到不该去的地方、是否存在重名或语义模糊的记号。如果存在上述问题则会进行处理，反之产生中间代码。&lt;/p&gt;
+&lt;p&gt;例如，步骤一中的那个例子中，a、b、c都是实型变量，而2是整型常量，在运算过程中需要将2转化为实型变量，再进行运算。&lt;/p&gt;
+&lt;h3 id=&#34;步骤四生成中间代码&#34;&gt;步骤四：生成中间代码&lt;/h3&gt;
+&lt;p&gt;中间代码是源代码向目标代码转换过程中的一种过渡编码。其形式会尽可能与机器的汇编语言相似，从而有利于下一步代码的生成。采用中间代码的好处之一是可以再中间代码上进行代码优化。&lt;/p&gt;
+&lt;p&gt;很多编译程序生成的中间代码采用的是“四元式”的结构，四元分别为运算符、运算对象1、运算对象2、结果。eg. (* a1 a2 t1)，将a1与a2相乘，后将结果储存到t1。&lt;/p&gt;
+&lt;h3 id=&#34;步骤五代码优化&#34;&gt;步骤五：代码优化&lt;/h3&gt;
+&lt;p&gt;代码优化阶段是通过改进中间代码，以便产生具有运行更快、占用空间更小等优点的目标码。&lt;/p&gt;
+&lt;p&gt;代码优化分为局部优化和全局优化。局部优化包括合并冗余操作，简化计算等，如以“清零”的指令替换掉“x=0”这一赋值指令。而全局优化包括改进循环，减少调用次数，快速地址算法等。&lt;/p&gt;
+&lt;p&gt;不同的编译器对于中间代码的优化程度和优化效率各不相同。能完成大部分优化的编译器称为优化编译器。但优化过程会在一定程度上影响编译的速度，有时候简单的优化也可能让程序最后的效率大大提高，同时降低编译速度下降的幅度。&lt;/p&gt;
+&lt;h3 id=&#34;步骤六代码生成&#34;&gt;步骤六：代码生成&lt;/h3&gt;
+&lt;p&gt;由代码生成器来生成目标机器的汇编程序，其中要完成数据分段、选定寄存器等工作，然后再生成机器可执行的代码。此过程中的一个关键问题是寄存器的分配。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//例：
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MOV&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id3&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//将id3放入寄存器R2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MUL&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;60.0&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//将R2与60.0相乘，结果仍储存在R2。其中的#表示60.0作为立即数处理，无需将其定义命名
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MOV&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id2&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//将id2放入寄存器R1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ADD&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R2&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//将R1与R2相加，并将结果储存于R1中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MOV&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;R1&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//将R1中的值传递给id1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>高精度寄算</title>
         <link>https://xiaotianmuyun1113.top/p/%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%AF%84%E7%AE%97/</link>
         <pubDate>Fri, 21 Jul 2023 17:24:39 +0800</pubDate>

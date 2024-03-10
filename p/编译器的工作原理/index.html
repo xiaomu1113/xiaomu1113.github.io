@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com time库概述 time库是'>
-<title>Time库</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='参考书籍 北京邮电大学出版社 《计算机软件基础》 秦金磊，李整编著 What&amp;rsquo;s 编译器 在计算机中，使用高级语言（如python、c&#43;&#43;等）写出来的源程序，无法'>
+<title>编译器的工作原理</title>
 
-<link rel='canonical' href='https://xiaotianmuyun1113.top/p/time%E5%BA%93/'>
+<link rel='canonical' href='https://xiaotianmuyun1113.top/p/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Time库'>
-<meta property='og:description' content='笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com time库概述 time库是'>
-<meta property='og:url' content='https://xiaotianmuyun1113.top/p/time%E5%BA%93/'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='编译器的工作原理'>
+<meta property='og:description' content='参考书籍 北京邮电大学出版社 《计算机软件基础》 秦金磊，李整编著 What&amp;rsquo;s 编译器 在计算机中，使用高级语言（如python、c&#43;&#43;等）写出来的源程序，无法'>
+<meta property='og:url' content='https://xiaotianmuyun1113.top/p/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/'>
 <meta property='og:site_name' content='晓天暮云的Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-09-19T08:37:46&#43;08:00'/><meta property='article:modified_time' content='2023-09-19T08:37:46&#43;08:00'/>
-<meta name="twitter:title" content="Time库">
-<meta name="twitter:description" content="笔记来源 北理——Python语言程序设计 本文内部图片大多来自课程课件，侵权请告知1979409875@qq.com time库概述 time库是">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-07-21T17:24:39&#43;08:00'/><meta property='article:modified_time' content='2023-07-21T17:24:39&#43;08:00'/>
+<meta name="twitter:title" content="编译器的工作原理">
+<meta name="twitter:description" content="参考书籍 北京邮电大学出版社 《计算机软件基础》 秦金磊，李整编著 What&amp;rsquo;s 编译器 在计算机中，使用高级语言（如python、c&#43;&#43;等）写出来的源程序，无法">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -266,11 +266,18 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#笔记来源">笔记来源</a></li>
-    <li><a href="#time库概述">time库概述</a></li>
-    <li><a href="#时间获取">时间获取</a></li>
-    <li><a href="#时间格式化">时间格式化</a></li>
-    <li><a href="#程序计时">程序计时</a></li>
+    <li><a href="#参考书籍">参考书籍</a></li>
+    <li><a href="#whats-编译器">What&rsquo;s 编译器</a></li>
+    <li><a href="#编译器的工作原理">编译器的工作原理</a>
+      <ol>
+        <li><a href="#步骤一词法分析">步骤一：词法分析</a></li>
+        <li><a href="#步骤二语法分析">步骤二：语法分析</a></li>
+        <li><a href="#步骤三语义分析">步骤三：语义分析</a></li>
+        <li><a href="#步骤四生成中间代码">步骤四：生成中间代码</a></li>
+        <li><a href="#步骤五代码优化">步骤五：代码优化</a></li>
+        <li><a href="#步骤六代码生成">步骤六：代码生成</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -289,12 +296,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/python%E8%AF%AD%E6%B3%95/" >
-                python语法
-            </a>
-        
-            <a href="/categories/python%E5%BA%93/" >
-                python库
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9B%B8%E5%85%B3/" >
+                计算机相关
             </a>
         
     </header>
@@ -302,7 +305,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/time%E5%BA%93/">Time库</a>
+            <a href="/p/%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">编译器的工作原理</a>
         </h2>
     
         
@@ -324,7 +327,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2023-09-19</time>
+                <time class="article-time--published">2023-07-21</time>
             </div>
         
 
@@ -339,7 +342,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 3 分钟
                 </time>
             </div>
         
@@ -354,70 +357,69 @@
     <section class="article-content">
     
     
-    <h2 id="笔记来源">笔记来源</h2>
-<p><a class="link" href="https://www.icourse163.org/course/BIT-268001?outVendor=zw_mooc_pclszykctj_"  target="_blank" rel="noopener"
-    >北理——Python语言程序设计</a></p>
-<p>本文内部图片大多来自课程课件，侵权请告知<a class="link" href="mailto:1979409875@qq.com" >1979409875@qq.com</a></p>
-<h2 id="time库概述">time库概述</h2>
-<p>time库是Python中用于处理时间的标准库，它可以实现时间表达，获取系统时间以及精确计时等功能</p>
-<h2 id="时间获取">时间获取</h2>
+    <h2 id="参考书籍">参考书籍</h2>
+<p>北京邮电大学出版社 《计算机软件基础》 秦金磊，李整编著</p>
+<h2 id="whats-编译器">What&rsquo;s 编译器</h2>
+<p>在计算机中，使用高级语言（如python、c++等）写出来的源程序，无法被计算机直接识别，高级语言必须经过翻译变成机器语言后才可被计算机所执行。这时候就要用到翻译器。而翻译器对高级语言翻译的方式一共有两种，分别为编译和解释，对应的翻译程序便称为编译器和翻译器。</p>
+<p>高级语言的编译过程可以由下图展示出来</p>
+<p><img src="/img/%e7%bc%96%e8%af%91%e8%bf%87%e7%a8%8b.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="编译过程"
+	
+	
+></p>
+<h2 id="编译器的工作原理">编译器的工作原理</h2>
+<p>编译器的基本工作过程包括六大步骤</p>
+<h3 id="步骤一词法分析">步骤一：词法分析</h3>
+<p>编译器会逐行扫描源代码，并识别符号串，主要为关键字、字面量、标识符（变量名和数据名）、运算符、注释、以及其他的特殊符号等。符号串会根据自身类别被归类并等待下一步的处理。</p>
+<p>例如，语句 a = b + c/2中，编译器将语句读入后将会得到记号流 a(id1), =, b(id2), +, c(id3), /, 2。其中分别使用id1，id2，id3来表示实型变量a、b、c，语句中间的空格被省略。</p>
+<h3 id="步骤二语法分析">步骤二：语法分析</h3>
+<p>得到记号流后，编译器中的语法分析器会将其分解成语法短语，如“程序”、“语句”、“表达式”等。这些语法短语可以表示成语法分析树。后根据所用语言的语法对每个分析树进行检查，若合法便以内部格式将其存起来。</p>
+<p><img src="/img/%e8%af%ad%e6%b3%95%e6%a0%91.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="语法分析树"
+	
+	
+></p>
+<h3 id="步骤三语义分析">步骤三：语义分析</h3>
+<p>语义分析的主要内容包括以下几个方面：运算符两端的类型是否兼容、该将哪些数据进行类型转换、是否控制转移到不该去的地方、是否存在重名或语义模糊的记号。如果存在上述问题则会进行处理，反之产生中间代码。</p>
+<p>例如，步骤一中的那个例子中，a、b、c都是实型变量，而2是整型常量，在运算过程中需要将2转化为实型变量，再进行运算。</p>
+<h3 id="步骤四生成中间代码">步骤四：生成中间代码</h3>
+<p>中间代码是源代码向目标代码转换过程中的一种过渡编码。其形式会尽可能与机器的汇编语言相似，从而有利于下一步代码的生成。采用中间代码的好处之一是可以再中间代码上进行代码优化。</p>
+<p>很多编译程序生成的中间代码采用的是“四元式”的结构，四元分别为运算符、运算对象1、运算对象2、结果。eg. (* a1 a2 t1)，将a1与a2相乘，后将结果储存到t1。</p>
+<h3 id="步骤五代码优化">步骤五：代码优化</h3>
+<p>代码优化阶段是通过改进中间代码，以便产生具有运行更快、占用空间更小等优点的目标码。</p>
+<p>代码优化分为局部优化和全局优化。局部优化包括合并冗余操作，简化计算等，如以“清零”的指令替换掉“x=0”这一赋值指令。而全局优化包括改进循环，减少调用次数，快速地址算法等。</p>
+<p>不同的编译器对于中间代码的优化程度和优化效率各不相同。能完成大部分优化的编译器称为优化编译器。但优化过程会在一定程度上影响编译的速度，有时候简单的优化也可能让程序最后的效率大大提高，同时降低编译速度下降的幅度。</p>
+<h3 id="步骤六代码生成">步骤六：代码生成</h3>
+<p>由代码生成器来生成目标机器的汇编程序，其中要完成数据分段、选定寄存器等工作，然后再生成机器可执行的代码。此过程中的一个关键问题是寄存器的分配。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">time</span><span class="p">()</span> <span class="c1">#获取当前时间戳，即计算机内部自带的时间值，并以浮点数形式表示</span>
-</span></span><span class="line"><span class="cl"><span class="n">ctime</span><span class="p">()</span> <span class="c1">#获取当前系统时间并以人类可读的方式返回一个字符串</span>
-</span></span><span class="line"><span class="cl"><span class="n">gmtime</span><span class="p">()</span> <span class="c1">#获取当前时间，并表示为计算机可处理的时间格式</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">//例：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">MOV</span> <span class="n">R2</span><span class="p">,</span> <span class="n">id3</span> <span class="c1">//将id3放入寄存器R2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">MUL</span> <span class="n">R2</span><span class="p">,</span> <span class="err">#</span><span class="mf">60.0</span> <span class="c1">//将R2与60.0相乘，结果仍储存在R2。其中的#表示60.0作为立即数处理，无需将其定义命名
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">MOV</span> <span class="n">R1</span><span class="p">,</span> <span class="n">id2</span> <span class="c1">//将id2放入寄存器R1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">ADD</span> <span class="n">R1</span><span class="p">,</span> <span class="n">R2</span> <span class="c1">//将R1与R2相加，并将结果储存于R1中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">MOV</span> <span class="n">id1</span><span class="p">,</span> <span class="n">R1</span> <span class="c1">//将R1中的值传递给id1
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="时间格式化">时间格式化</h2>
-<p><img src="/img/%e6%97%b6%e9%97%b4%e6%a0%bc%e5%bc%8f%e5%8c%961.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="时间格式化"
-	
-	
->
-<img src="/img/%e6%97%b6%e9%97%b4%e6%a0%bc%e5%bc%8f%e5%8c%964.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="时间格式化"
-	
-	
->
-<img src="/img/%e6%97%b6%e9%97%b4%e6%a0%bc%e5%bc%8f%e5%8c%962.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="时间格式化"
-	
-	
->
-<img src="/img/%e6%97%b6%e9%97%b4%e6%a0%bc%e5%bc%8f%e5%8c%963.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="时间格式化"
-	
-	
-></p>
-<h2 id="程序计时">程序计时</h2>
-<p>测量时间用到perf_counter()函数，它可以返回一个cpu级别的精确时间计数值，单位为s，但由于起点不确定，故使用时需要多次调用，通过计算差值来确定程序所用的时间</p>
-<p>sleep(s)函数用于控制程序的停顿，s是程序停顿的时间，单位为s，支持浮点数，运行到该函数后，程序将停顿时间s</p>
-
+</div>
 </section>
 
 
@@ -445,80 +447,6 @@
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">相关文章</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/p/wordcloud%E5%BA%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Wordcloud库</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/jieba%E5%BA%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Jieba库</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/pyinstaller%E5%BA%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Pyinstaller库</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/random%E5%BA%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Random库</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/p/turtle%E5%BA%93/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Turtle库</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     
